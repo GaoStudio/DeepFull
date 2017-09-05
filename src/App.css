@@ -1,0 +1,28 @@
+.App {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  width: 100%;
+  display: flex;
+  background-color: aliceblue;
+}
+.App-left{
+  flex:2;
+  height: 100%;
+  width:100%;
+}
+.App-center{
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-image: url("./images/PixelWhite.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.App-right{
+  flex:2;
+  height: 100%;
+  width:100%;
+}
