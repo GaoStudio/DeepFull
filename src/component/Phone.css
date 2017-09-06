@@ -8,13 +8,20 @@
 }
 .Top{
     position: relative;
-    padding-top: 20px;
+    height:9%;
+    width:100%;
+    padding-top: 10px;
+    display: flex;
+    background-color: #00f;;
+    justify-content: center;
+    flex-direction: column;
 }
 .TopTwo{
     display: flex;
     align-items: center;
     margin-left: 50px;
     margin-right: 60px;
+    background-color: #0f0;;
 }
 .Camera {
     display: flex;
@@ -41,12 +48,16 @@
     width: 32px;
     border-radius: 20px;
     margin-top: 20px;
+    background-color: #0ff;;
     background: #000;
 }
 .Screen{
     margin: 0 auto;
     height: 80%;
     width: 95%;
-    margin-top: 10px;
-    background-color: #f00;;
+    background-color: #f00;
+}
+.Bottom{
+    height:22%;
+    width:100%;
 }

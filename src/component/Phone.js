@@ -12,7 +12,8 @@ class App extends Component {
                 <span className="Sensor"></span>
             </div>
             <div className="Screen">
-
+            </div>
+            <div className="Bottom">
             </div>
         </div>
         );
