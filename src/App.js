@@ -22,7 +22,7 @@ class App extends Component {
                    {/* <div className="phone-content"></div>*/}
                 </div>
                 <div className="App-right">
-                    <h2>Welcome to React</h2>
+                    <div className="DidDemo"></div>
                     <button onClick={this._onClick.bind(this)}></button>
                 </div>
             </div>

@@ -12,7 +12,8 @@ export default class App extends Component {
                             <span className="Receiver"></span>
                         </div>
                         <span className="Sensor"></span>
-                        <span style={{bottom: 5}} className="Sidesbar"></span>
+                        <span className="Topbar"></span>
+                        <span className="Sidesbar"></span>
                     </div>
                     <div className="Screen">
                     </div>

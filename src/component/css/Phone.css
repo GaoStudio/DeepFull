@@ -25,10 +25,7 @@
 }
 .TopTwo{
     display: flex;
-    align-self: stretch;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 60px;
 }
 .Camera {
     display: flex;
@@ -40,9 +37,8 @@
     background: #333;
 }
 .Receiver{
-    display: flex;
     height: 8px;
-    width: 100px;
+    width: 50px;
     margin: 0 auto;
     border-radius: 10px;
     align-self: center;
@@ -74,6 +70,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 .BottomView{
     height:100%;
@@ -88,18 +85,26 @@
     align-items: center;
     flex-direction: column;
 }
+.Topbar{
+    width:3%;
+    position: absolute;
+    height:5px;
+    top:-5px;
+    left:75%;
+    background-color:#BBB;
+}
 .Sidesbar{
     width:100%;
     position: absolute;
     height:15%;
-    border-image: linear-gradient(180deg,red, blue) 5 5;
-    border-left: 20px solid ;
-    border-right: 20px solid ;
+    bottom: 5px;
+    border-left: 20px solid #BBB;
+    border-right: 20px solid #BBB;
 }
 .SidesbarBtom{
     width:95%;
     position: absolute;
     height:15%;
-    border-left: 30px solid #828282 ;
-    border-right: 30px solid #828282 ;
+    border-left: 30px solid #BBB ;
+    border-right: 30px solid #BBB ;
 }

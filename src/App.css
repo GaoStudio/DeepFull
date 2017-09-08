@@ -23,3 +23,11 @@
 .App-right{
   flex:1;
 }
+.DidDemo{
+  width: 100px;
+  height:100px;
+  background-color: #000000;
+  border-image: linear-gradient(red, blue) 10 10;
+  border-left: 20px solid ;
+  border-right: 20px solid ;
+}
