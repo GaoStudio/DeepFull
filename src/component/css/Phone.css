@@ -11,6 +11,7 @@
     background-color: #F8F8F8;;
     border: 5px solid #d9dbdc;
     border-radius: 8vh;
+    flex-direction: row;
 }
 .Top{
     position: relative;
@@ -74,10 +75,31 @@
     align-items: center;
     flex-direction: column;
 }
+.BottomView{
+    height:100%;
+    width:100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    background-color: #F8F8F8;
+    border-bottom-left-radius: 8vh;
+    border-bottom-right-radius:8vh ;
+    border-bottom: 8vh;
+    align-items: center;
+    flex-direction: column;
+}
 .Sidesbar{
     width:100%;
     position: absolute;
     height:15%;
-    border-left: 5px solid #bbb ;
-    border-right: 5px solid #bbb ;
+    -moz-border-left-colors:White Red ;
+    border-left: 5px solid ;
+    border-right: 5px solid #828282 ;
+}
+.SidesbarBtom{
+    width:95%;
+    position: absolute;
+    height:15%;
+    border-left: 30px solid #828282 ;
+    border-right: 30px solid #828282 ;
 }

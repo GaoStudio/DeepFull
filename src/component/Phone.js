@@ -17,8 +17,11 @@ export default class App extends Component {
                     <div className="Screen">
                     </div>
                     <div className="Bottom">
-                        <Google visible={false} size={"8vh"}/>
-                        <span className="Sidesbar"></span>
+                        <span className="SidesbarBtom"></span>
+                        <div className="BottomView">
+                            <Google visible={false} size={"8vh"}/>
+                        </div>
+
                     </div>
                 </div>
             </div>
