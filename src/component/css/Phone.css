@@ -92,9 +92,9 @@
     width:100%;
     position: absolute;
     height:15%;
-    -moz-border-left-colors:White Red ;
-    border-left: 5px solid ;
-    border-right: 5px solid #828282 ;
+    border-image: linear-gradient(180deg,red, blue) 5 5;
+    border-left: 20px solid ;
+    border-right: 20px solid ;
 }
 .SidesbarBtom{
     width:95%;
