@@ -5,24 +5,21 @@ export default class App extends Component {
     render() {
         return (
             <div className="Container">
+                <div className="Topbar"></div>
+                <div className="Sidesbar"></div>
+                <div className="SidesbarBottom"></div>
                 <div className="Phone">
                     <div className="Top">
-                        <div className="TopTwo">
-                            <span className="Camera"></span>
-                            <span className="Receiver"></span>
-                        </div>
+                        <span className="Camera"></span>
+                        <span className="Receiver"></span>
                         <span className="Sensor"></span>
-                        <span className="Topbar"></span>
-                        <span className="Sidesbar"></span>
                     </div>
                     <div className="Screen">
                     </div>
                     <div className="Bottom">
-                        <span className="SidesbarBtom"></span>
                         <div className="BottomView">
-                            <Google visible={false} size={"8vh"}/>
+                            <Google visible={true} size={"8vh"}/>
                         </div>
-
                     </div>
                 </div>
             </div>
