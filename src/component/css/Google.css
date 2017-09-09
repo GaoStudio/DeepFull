@@ -4,7 +4,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation:animations 2s ease infinite;
 }
+@keyframes animations
+{
+     0%{box-shadow:0 0 10px black;}
+     50%{box-shadow:0 0 10px white;}
+     100%{box-shadow:0 0 10px black;}
+}
+
 .Content{
     width:94%;
     height:94%;

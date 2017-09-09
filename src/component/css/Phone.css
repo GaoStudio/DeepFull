@@ -32,10 +32,10 @@
 .Phone{
     display: block;
     position: absolute;
-    top: 1%;
-    left: 2%;
-    bottom:1%;
-    right:2%;
+    top: 0.6%;
+    left: 1.6%;
+    bottom:0.6%;
+    right:1.6%;
     background-color: #f8f8f8;
     border-radius: 7.5vh;
     flex-direction: column;

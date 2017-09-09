@@ -10,7 +10,7 @@ export default class Google extends Component {
     }
     render() {
         return (
-            <div style={{height:this.props.size,width:this.props.size}} className="Google">
+            <div onClick={this.props.onClick} style={{height:this.props.size,width:this.props.size}} className="Google">
                 <div className="Content">
                     {
                         this.props.visible?
