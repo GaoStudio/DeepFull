@@ -15,8 +15,7 @@ class App extends Component {
 
                 </div>
                 <div className="App-center">
-                   <Phone/>
-                   {/* <div className="phone-content"></div>*/}
+                   {/*<Phone/>*/}
                 </div>
                 <div className="App-right">
 
