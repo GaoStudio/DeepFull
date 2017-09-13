@@ -1,11 +1,28 @@
 .App {
-  position:absolute;
-  top:0px;
-  bottom:0px;
-  width: 100%;
-  display: flex;
-  background-color: aliceblue;
+  display: block;
+  background-position:  center;
+  background-image: url("./images/glass.gif");
+  background-size: cover;
 }
+.HomeTop{
+  width: 100%;
+  height: 100vh;
+}
+.DownAllow{
+  width: 29px;
+  height:50px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  background-image: url("./images/sign_down.png");
+  background-position:  center;
+  background-size: cover;
+}
+.HomeBottom{
+  width: 100%;
+  height: 20vh;
+}
+
 .App-left{
   flex:1;
 }
@@ -15,7 +32,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
- /* background-image: url("./images/PixelWhite.png");
+/*  background-image: url("./images/PixelWhite.png");
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: contain;*/

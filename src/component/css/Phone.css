@@ -36,14 +36,14 @@
     left: 1.6%;
     bottom:0.6%;
     right:1.6%;
-    background-color: #f8f8f8;
+    background-color: #f7f7f7;
     border-radius: 7.5vh;
     flex-direction: column;
 }
 .Top{
     display: block;
     position: relative;
-    height:9%;
+    height:10%;
     width:100%;
     flex-direction: column;
 }
@@ -52,38 +52,41 @@
     height: 14%;
     width: 3%;
     left: 15%;
-    top:20%;
+    top:25%;
     border: 3px solid #5E5E5E;
     border-radius: 60%;
     background: #333;
 }
 .Receiver{
     position: absolute;
-    left: 38%;
+    left: 35%;
     height: 12%;
-    width: 24%;
-    top:25%;
+    width: 30%;
+    top:30%;
     margin: 0 auto;
     border-radius: 10px;
     background: #EEE;
+    border-top: solid 2px #c9c9c9;
+
 }
 .Sensor{
     position: absolute;
-    height: 25%;
-    width: 12%;
-    left: 44%;
-    bottom: 8%;
+    height: 22%;
+    width: 10%;
+    left: 45%;
+    bottom: 10%;
     border-radius: 10px;
-    background: #000;
+    background: #1f1f1f;
 }
 .Screen{
     margin: 0 auto;
     height: 80%;
-    width: 95%;
+    width: 94%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-image: url("../../images/pixel_bg.jpg");
+    background-size: cover;
 }
 .Bottom{
     height:10%;
