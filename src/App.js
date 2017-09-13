@@ -17,11 +17,16 @@ class App extends Component {
         var page = scrollTop() / height | 0;
         if(toPage){
             page =toPage;
-            moveDown()
+            if(page==0){
+                move();
+            }else{
+                moveDown();
+            }
         }else {
             window.addEventListener("resize", onresize, false);
             onresize();
         }
+        document.body.removeEventListener("onwheel" in document ? "wheel" : "mousewheel",()=>{})
         document.body.addEventListener(
             "onwheel" in document ? "wheel" : "mousewheel",
             function(e) {
@@ -81,6 +86,16 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="HomeTop">
+                    <div className="HomeContent">
+                        <ul className="list-inline">
+                            <li className="list-inline-kuo">{"{"}</li>
+                            <li><a href="http://jakewharton.com/blog">Blog</a></li>
+                            <li><a href="http://jakewharton.com/presentations">Weibo</a></li>
+                            <li><a href="https://github.com/JakeWharton">GitHub</a></li>
+                            <li><a href="https://twitter.com/JakeWharton">Me</a></li>
+                            <li className="list-inline-kuo">{"}"}</li>
+                        </ul>
+                    </div>
                     <div className="DownAllow" onClick={()=>{this._handleScroll(1)}}></div>
                 </div>
                 <footer className="HomeBottom"></footer>
