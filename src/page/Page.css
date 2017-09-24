@@ -62,3 +62,21 @@
     top: 200px;
     width: 100%;
 }
+.PostCenter{
+    display: flex;
+    flex-direction: row;
+}
+.PostList{
+    flex: 7;
+}
+.PostSummary{
+    flex: 3;
+}
+.PostSummaryMark{
+    display: block;
+    margin: 10px 10px 20px 10px;
+
+}
+.ant-tag {
+    margin-bottom: 8px;
+}

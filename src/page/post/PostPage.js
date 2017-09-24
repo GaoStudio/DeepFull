@@ -4,12 +4,13 @@
  */
 import React, {Component} from 'react';
 import './../Page.css';
+import Tag from "./../../component/Tag.js"
 import {Affix, Carousel} from 'antd';
+import 'antd/dist/antd.css';
 export default class PostPage extends Component {
     constructor(props) {
         super(props)
     }
-
     render() {
         return (
             <div className="PostPage">
@@ -25,7 +26,7 @@ export default class PostPage extends Component {
                         <div className="PostTopContent">
                             <img style={{width: 100, height: 100, borderRadius: 50}}
                                  src={require("../../images/timg.jpg")}></img>
-                            <text style={{color: "#363636", fontWeight: 600, fontSize: 16, marginTop: 10}}>Deep</text>
+                            <text style={{color: "#363636", fontWeight: 600, fontSize: 16, marginTop: 10}}>高卫的技术博客</text>
                         </div>
                         <div className="Sign">
                             <Affix style={{width: "100%"}}>
@@ -46,7 +47,30 @@ export default class PostPage extends Component {
                             </Affix>
                         </div>
                     </div>
+                    <div className="PostCenter">
 
+                        <div className="PostList">
+                            left
+                        </div>
+                        <div className="PostSummary">
+                            <div className="PostSummaryMark">
+                                <Tag color="pink">Java</Tag>
+                                <Tag color="red">Android</Tag>
+                                <Tag color="orange">React</Tag>
+                                <Tag color="green">React Native</Tag>
+                                <Tag color="cyan">React Navigation</Tag>
+                                <Tag color="blue">RxJava</Tag>
+                                <Tag color="purple">线程</Tag>
+                                <Tag color="pink">pink</Tag>
+                                <Tag color="red">red</Tag>
+                                <Tag color="orange">orange</Tag>
+                                <Tag color="green">green</Tag>
+                                <Tag color="cyan">cyan</Tag>
+                                <Tag color="blue">blue</Tag>
+                                <Tag color="purple">purple</Tag>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

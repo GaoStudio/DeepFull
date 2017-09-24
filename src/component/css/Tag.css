@@ -1,0 +1,76 @@
+.Tag{
+    display: inline-block;
+    width:fit-content;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor:pointer;
+    border-radius: 12px;
+    margin: 5px;
+}
+.TagText{
+    font-size:14px;
+}
+.tag-pink {
+    color: #f5317f;
+}
+.tag-pink-inverse {
+    background: #fdd8e7;
+    border-color: #fdd8e7;
+}
+.tag-red {
+    color: #f04134;
+
+}
+.tag-red-inverse {
+    background: #fcdbd9;
+    border-color: #fcdbd9;
+}
+.tag-orange {
+    color: #f56a00;
+
+}
+.tag-orange-inverse {
+    background: #fde3cf;
+    border-color: #fde3cf;
+}
+.tag-yellow {
+    color: #ffbf00;
+
+}
+.tag-yellow-inverse {
+    background: #fff3cf;
+    border-color: #fff3cf;
+}
+.tag-cyan {
+    color: #00a2ae;
+
+}
+.tag-cyan-inverse {
+    background: #cfedf0;
+    border-color: #cfedf0;
+}
+.tag-green {
+    color: #00a854;
+}
+.tag-green-inverse {
+    background: #cfefdf;
+    border-color: #cfefdf;
+}
+.tag-blue {
+    color: #108ee9;
+
+}
+.tag-blue-inverse {
+    background: #d2eafb;
+    border-color: #d2eafb;
+}
+.tag-purple {
+    color: #7265e6;
+
+}
+.tag-purple-inverse {
+    background: #e4e2fa;
+    border-color: #e4e2fa;
+}
