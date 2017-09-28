@@ -21,6 +21,6 @@ export default class Article extends Component {
                     </span>
                 </div>
             </div>
-        );
+        )
     }
 }

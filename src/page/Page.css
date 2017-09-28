@@ -78,6 +78,9 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.PostSummarySpecial {
+    display: block;
+}
 .ant-tag {
     margin-bottom: 8px;
 }

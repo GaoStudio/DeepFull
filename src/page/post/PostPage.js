@@ -6,7 +6,7 @@ import React, {Component} from 'react';
 import './../Page.css';
 import Tag from "./../../component/Tag.js"
 import Special from "./../../component/Special.js"
-import {Affix, Carousel, Card} from 'antd';
+import {Affix, Carousel, Card,Tag as Tags} from 'antd';
 import 'antd/dist/antd.css';
 import Article from "./../../component/Article.js"
 export default class PostPage extends Component {
@@ -73,7 +73,7 @@ export default class PostPage extends Component {
                                 </div>
                             </Card>
                             <Card title="专题" bordered={true} bodyStyle={{ padding: 5 }} style={{marginTop: 20,marginRight:20}}>
-                                <div className="PostSummaryMark">
+                                <div className="PostSummarySpecial">
                                     <Special imagelogo={require("./../../images/react-nav-logo.svg")} title="React Navigation全解析" pagenum={20} readnum = {20} />
                                     <div style={{backgroundColor:"#e8e8e8",height:1}}></div>
                                     <Special imagelogo={require("./../../images/regengxin.png")} title="热更新" pagenum={20} readnum = {20} />
@@ -85,6 +85,11 @@ export default class PostPage extends Component {
                             </Card>
                         </div>
                         <div className="PostList">
+                            <div style={{marginTop:20}}>
+                                <text>Select ></text>
+                                <Tags closable>Tag 2</Tags>
+                                <Tags closable>Prevent Default</Tags>
+                            </div>
                             <Article />
                             <Article />
                             <Article />
