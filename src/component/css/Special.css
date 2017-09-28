@@ -14,9 +14,9 @@
 
 }
 .Title {
+    display: inline-block;
     position: relative;
     text-decoration: none;
-    font-size: 20px;
     color: #f75357;
     cursor:pointer;
     font-weight:bold;

@@ -8,6 +8,7 @@ import Tag from "./../../component/Tag.js"
 import Special from "./../../component/Special.js"
 import {Affix, Carousel, Card} from 'antd';
 import 'antd/dist/antd.css';
+import Article from "./../../component/Article.js"
 export default class PostPage extends Component {
     constructor(props) {
         super(props)
@@ -52,12 +53,9 @@ export default class PostPage extends Component {
                     </div>
                     <div className="PostCenter">
 
-                        <div className="PostList">
-                            left
-                        </div>
                         <div className="PostSummary">
                             <Card title="标签" bordered={true} bodyStyle={{ padding: 5 }} style={{marginTop: 20,marginRight:20}}>
-                                <div className="PostSummaryMark">
+                                <div  className="PostSummaryMark">
                                     <Tag color="pink">Java</Tag>
                                     <Tag color="red">Android</Tag>
                                     <Tag color="orange">React</Tag>
@@ -85,13 +83,12 @@ export default class PostPage extends Component {
                                     <Special imagelogo={require("./../../images/regengxin.png")} title="热更新" pagenum={20} readnum = {20} />
                                 </div>
                             </Card>
-                            <Card title="分类" bordered={true} bodyStyle={{ padding: 5 }} style={{marginTop: 20,marginRight:20}}>
-                                <div className="PostSummaryMark">
-                                    <Special imagelogo={require("./../../images/react-nav-logo.svg")} title="React Navigation全解析" pagenum={20} readnum = {20} />
-                                    <div style={{backgroundColor:"#e8e8e8",height:1}}></div>
-                                    <Special imagelogo={require("./../../images/regengxin.png")} title="热更新" pagenum={20} readnum = {20} />
-                                </div>
-                            </Card>
+                        </div>
+                        <div className="PostList">
+                            <Article />
+                            <Article />
+                            <Article />
+                            <Article />
                         </div>
                     </div>
                 </div>

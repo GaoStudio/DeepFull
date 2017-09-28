@@ -64,15 +64,19 @@
 .PostCenter{
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 .PostList{
-    flex: 7;
+    flex: 8;
 }
 .PostSummary{
     flex: 3;
+    margin-left: 10px;
 }
 .PostSummaryMark{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .ant-tag {
     margin-bottom: 8px;

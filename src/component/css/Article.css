@@ -1,0 +1,72 @@
+.Article{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 20px 20px 0px 20px;
+    border-bottom: 0.5px solid #aaaaaa;
+}
+.SpecialContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+
+}
+.ArticleTitle {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #f75357;
+    cursor:pointer;
+    font-weight:bold;
+    font-size: 1.5rem;
+}
+.ArticleTitle:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background: #f75357;
+    transition: all .3s;
+}
+.ArticleTitle:hover:before{
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.Content{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    cursor:pointer;
+    margin-top: 5px;
+    font-weight:bold;
+    font-size: 1rem;
+    color: #aaa;
+}
+.Content:hover{text-decoration:underline;color: #aaa;;}
+.ArticleBottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ArticleDateImage{
+    background-image: url("./../../images/date.png");
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-weight: 900;
+    color: #aaaaaa;
+    background-size: cover;
+}
+.ArticleDateText{
+    color: #aaaaaa;
+    font-weight: 600;
+    font-size: large;
+    font-family:inherit;
+    font-style:italic;
+    height:1.5rem;
+}
