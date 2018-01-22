@@ -27,9 +27,18 @@ export default class Home extends Component {
                         <li><Link to="/TodoList">TodoList</Link></li>
                     </ul>
                     <hr/>
-                    <Route exact path="/:name" component={FirstPage}/>
-                    <Route path="/about" component={SecondPage}/>
-                    <Route path="/TodoList" component = {TodoList}/>
+                    <div >
+                        <CSSTransitionGroup
+                            transitionName="fade"
+                            transitionEnterTimeout={300}
+                            transitionLeaveTimeout={300}
+                        >
+                            <Route exact path="/:name" component={FirstPage}/>
+                            <Route path="/about" component={SecondPage}/>
+                            <Route path="/TodoList" component = {TodoList}/>
+                        </CSSTransitionGroup>
+                    </div>
+
                 </div>
             </Router>
         );

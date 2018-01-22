@@ -1,9 +1,7 @@
-/**
- * Created by Administrator.
- * Date at 2017/9/28.
- */
-import React, {Component} from 'react';
+const React = require('react')
 const ReactMarkdown = require('react-markdown')
+const CodeBlock = require('./code-block')
+
 const initialSource = `
 # Live demo
 
@@ -49,14 +47,40 @@ Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
 
 A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
 `
-export default class FirstPage extends Component {
-    constructor(props) {
-        super(props)
-    }
 
-    render() {
-        return (
-            <ReactMarkdown source={initialSource} />
-        );
+export default class Demo extends React.PureComponent {
+  constructor(props) {
+    super(props)
+
+    this.handleControlsChange = this.handleControlsChange.bind(this)
+    this.handleMarkdownChange = this.handleMarkdownChange.bind(this)
+    this.state = {
+      markdownSrc: initialSource,
+      htmlMode: 'raw'
     }
+  }
+
+  handleMarkdownChange(evt) {
+    this.setState({markdownSrc: evt.target.value})
+  }
+
+  handleControlsChange(mode) {
+    this.setState({htmlMode: mode})
+  }
+
+  render() {
+    return (
+      <div className="demo">
+        <div className="result-pane">
+          <ReactMarkdown
+            className="result"
+            source={this.state.markdownSrc}
+            skipHtml={this.state.htmlMode === 'skip'}
+            escapeHtml={this.state.htmlMode === 'escape'}
+            renderers={{code: CodeBlock}}
+          />
+        </div>
+      </div>
+    )
+  }
 }
