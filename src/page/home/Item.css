@@ -1,0 +1,77 @@
+.post-list-item {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 30px;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+    border-radius: 2px;
+    cursor: pointer;
+}
+.post-link{
+    text-decoration:none;
+}
+.post-link:hover{
+    color: #f00;
+}
+.post-list-content{
+    padding: 30px;
+}
+.post-list-title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333333;
+}
+.post-list-simple{
+    font-size: 14px;
+    color: #999;
+    line-height: 22px;
+}
+.post-list-operation{
+    background-image: url('../../images/info_bg.png');
+    padding: 17px 30px;
+    display: flex;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25) inset;
+    text-shadow: 0 1px 0 #fff;
+}
+.post-list-operation-item{
+    float: left;
+    margin: 5px 0;
+    margin-right: 20px;
+
+}
+.post-list-operation-item span{
+    display: block;
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 16px;
+    background-image: url('../../images/ico.png');
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+.post-list-time{
+    background-position: 0 -45px;
+    color: #999;
+}
+.post-list-time:hover{
+    background-position: 0 -93px;
+    color: #333;
+}
+.post-list-views {
+    background-position: 0 -479px;
+    color: #999;
+}
+.post-list-views:hover{
+    background-position: 0 -515px;
+    color: #333;
+}
+.post-list-category{
+    background-position: 0 -404px;
+    color: #999;
+}
+.post-list-category:hover{
+    background-position: 0 -443px;
+    color: #333;
+}
