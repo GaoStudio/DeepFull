@@ -1,0 +1,9 @@
+.loadingContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading{
+    width: 30px;
+    height: 30px;
+}

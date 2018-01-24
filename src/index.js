@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Demo from './page/markdown/demo.js'
+import './index.css';
+import RootRoute from './page/Router.js'
 import registerServiceWorker from './registerServiceWorker';
 
-if (typeof window !== 'undefined') {
-    ReactDOM.render(<Demo />, document.getElementById('root'))
-}
+ReactDOM.render(<RootRoute />, document.getElementById('root'));
 registerServiceWorker();
