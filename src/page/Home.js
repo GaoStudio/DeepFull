@@ -33,7 +33,7 @@ class Home extends Component {
                         <Switch>
                             <Route exact path="/" render={()=> <Redirect to="/Home"/>} />
                             <Route exact path="/about" render={props => <About {...props}/>} />
-                            <Route exact path="/timeline" render={props => <TimeLine {...props}/>} />
+                            <Route exact path="/GameLive" render={props => <TimeLine {...props}/>} />
                             <Route exact path="/:path" render={props => <Post {...props}/>} />
                             <Route exact path="/:path/:post" render={props => <Article {...props}/>} />
                             <Route path="*" render={props => <Nopage {...props}/>} />

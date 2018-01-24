@@ -1,6 +1,46 @@
-.SecondPage{
+.TimeLine{
     margin: 0 auto;
     display: flex;
     flex: 1;
     flex-direction: row;
 }
+.left-item{
+    flex-direction: row;
+    display: flex;
+    margin: 10px 20px 10px 0px;
+}
+.right-item{
+    flex-direction: row;
+    display: flex;
+    margin: 10px 0px 10px 20px;
+}
+.item{
+    padding: 30px;
+    background-color: white;
+    flex: 1;
+    display: inline;
+}
+.left-corner{
+    height: 0px;
+    width: 0px;
+    border-top: 10px solid transparent;
+    border-left: 18px solid white;
+    top: 10px;
+    position: absolute;
+    border-bottom: 10px solid transparent;
+}
+.right-corner{
+    height: 0px;
+    width: 0px;
+    border-top: 10px solid transparent;
+    border-right: 18px solid white;
+    top: 10px;
+    position: absolute;
+    border-bottom: 10px solid transparent;
+}
+.corner{
+    width: 18px;
+    float: left;
+    position: relative;
+}
+
