@@ -1,7 +1,7 @@
-const React = require('react')
-const ReactMarkdown = require('react-markdown')
-const CodeBlock = require('./code-block')
-
+import React, {Component} from 'react';
+import ReactMarkdown from 'react-markdown'
+import CodeBlock from './code-block'
+var NProgress = require('nprogress');
 const initialSource = `
 # Live demo
 
@@ -48,7 +48,7 @@ Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
 A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
 `
 
-export default class Demo extends React.PureComponent {
+export default class Demo extends Component {
   constructor(props) {
     super(props)
 
@@ -67,10 +67,19 @@ export default class Demo extends React.PureComponent {
   handleControlsChange(mode) {
     this.setState({htmlMode: mode})
   }
-
+  _onClick=()=>{
+      NProgress.start()
+  }
+  _onStopClick=()=>{
+        NProgress.done()
+  }
   render() {
     return (
       <div className="demo">
+        <div className="editor-pane">
+            <div onClick={this._onClick} style={{color:'#fff',width:200,height:50,backgroundColor:'#333',justifyContent:'center'}}>NProgress</div>
+            <div onClick={this._onStopClick} style={{color:'#fff',width:200,height:50,backgroundColor:'#333',justifyContent:'center'}}>Stop</div>
+        </div>
         <div className="result-pane">
           <ReactMarkdown
             className="result"
