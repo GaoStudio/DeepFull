@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react';
 import Home from './Home'
+import SecondPage from './router/SecondPage'
 import {
     BrowserRouter as Router,
     Route,
@@ -13,7 +14,7 @@ class RootRoute extends Component {
         return(
             <Router>
                 <Switch>
-                    <Route path="/" render={props => <Home {...props}/>} />
+                    <Route path="/" render={props => <SecondPage {...props}/>} />
                 </Switch>
             </Router>
         )

@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import Markdown from 'react-markdown'
-import CodeBlock from '../../components/code-block'
+import CodeBlock from '../../components/CodeLock'
 import './Article.css';
 const initialSource = `
 # Live demo
