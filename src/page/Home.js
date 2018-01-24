@@ -13,6 +13,7 @@ import {
     Switch
 } from 'react-router-dom'
 import Article from "./home/Article";
+import TimeLine from "./home/TimeLine";
 class Home extends Component {
     componentWillReceiveProps(nextProps){
         //当路由切换时,回到顶部
@@ -24,12 +25,15 @@ class Home extends Component {
     render(){
         return(
             <div className="container">
-                <Menu location={this.props.location}/>
+                <div className="left">
+                    <Menu location={this.props.location}/>
+                </div>
                 <div className="right">
                     <div className="right-content">
                         <Switch>
                             <Route exact path="/" render={()=> <Redirect to="/Home"/>} />
                             <Route exact path="/about" render={props => <About {...props}/>} />
+                            <Route exact path="/timeline" render={props => <TimeLine {...props}/>} />
                             <Route exact path="/:path" render={props => <Post {...props}/>} />
                             <Route exact path="/:path/:post" render={props => <Article {...props}/>} />
                             <Route path="*" render={props => <Nopage {...props}/>} />

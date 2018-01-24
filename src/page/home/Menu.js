@@ -53,7 +53,6 @@ class Menu extends Component {
     render() {
         let _this = this;
         return (
-            <div className="left">
                 <div className="left-content">
                     <header className="logo">
                         <div className="logo-img"><Link to={{pathname:`/${ this.state.categoryList[0]&&this.state.categoryList[0].bCategory_path}`,state:this.state.categoryList[0]}}><img src={require("../../images/headlogo.png")}  ></img></Link></div>
@@ -91,7 +90,6 @@ class Menu extends Component {
                         <div>©DeepFull.com</div>
                     </footer>
                 </div>
-            </div>
         )
     }
 }

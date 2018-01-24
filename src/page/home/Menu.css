@@ -1,8 +1,4 @@
-.left{
-    color: #adadad;
-    font-size: 100%;
-    flex: 1;
-}
+
 .left-content{
     display: flex;
     margin-left: 15px;

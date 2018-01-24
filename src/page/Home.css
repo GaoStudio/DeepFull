@@ -1,10 +1,16 @@
 .container{
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
     padding-top: 5%;
     padding-bottom: 5%;
     display: flex;
     flex-direction: row;
+}
+.left{
+    color: #adadad;
+    font-size: 100%;
+    max-width: 333px;
+    flex: 1;
 }
 .right{
     flex: 2;
