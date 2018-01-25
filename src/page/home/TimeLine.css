@@ -2,45 +2,94 @@
     margin: 0 auto;
     display: flex;
     flex: 1;
+    position: relative;
     flex-direction: row;
+}
+.spinerLine{
+    width: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    z-index: 1;
+    border: dotted 1px #acb7c0;
 }
 .left-item{
-    flex-direction: row;
-    display: flex;
-    margin: 10px 20px 10px 0px;
+    background-color: rgba(0,0,0,0.7);
+    flex: 1;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.3);
+    border-radius: 3px;
+    display: inline;
+    margin: 10px 0px 0px 0px;
 }
 .right-item{
-    flex-direction: row;
-    display: flex;
-    margin: 10px 0px 10px 20px;
+    background-color: rgba(0,0,0,0.7);
+    flex: 1;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.3);
+    border-radius: 3px;
+    display: inline;
+    margin: 10px 0px 10px 0px;
 }
 .item{
-    padding: 30px;
-    background-color: white;
-    flex: 1;
-    display: inline;
+    flex-direction: row;
+    display: flex;
+    color: #EFEFEF;
 }
 .left-corner{
-    height: 0px;
-    width: 0px;
     border-top: 10px solid transparent;
-    border-left: 18px solid white;
-    top: 10px;
-    position: absolute;
+    border-left: 12px solid  rgba(0,0,0,0.7);
     border-bottom: 10px solid transparent;
+}
+.left-line{
+    width: 20px;
+    height: 0px;
+    border-top: solid 1px #acb7c0;
+    background: #000;
+}
+.left-icon{
+    right: -6px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background: #FFF;
+    position: absolute;
+    z-index: 10;
+    border: solid 2px #acb7c0;
+    border-radius: 50%;
 }
 .right-corner{
-    height: 0px;
-    width: 0px;
     border-top: 10px solid transparent;
-    border-right: 18px solid white;
-    top: 10px;
-    position: absolute;
+    border-right: 12px solid  rgba(0,0,0,0.7);
     border-bottom: 10px solid transparent;
 }
+.right-line{
+     width: 20px;
+     height: 0px;
+     border-top: solid 1px #acb7c0;
+     background: #000;
+ }
+.right-icon{
+    left: -6px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background: #FFF;
+    position: absolute;
+    z-index: 10;
+    border: solid 2px #acb7c0;
+    border-radius: 50%;
+}
 .corner{
-    width: 18px;
-    float: left;
+    width: 32px;
+    height: 40px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: relative;
+}
+.corner2{
+    top: 40px;
 }
 
