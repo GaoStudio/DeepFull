@@ -110,6 +110,20 @@ export default class TimeLine extends Component {
             </div>
         )
     }
+    _renderRightItem=(item,index)=>{
+        return(
+            <div key={index} className="item">
+                <div className="corner corner2">
+                    <div className="right-icon"></div>
+                    <div className="right-line"></div>
+                    <div className="right-corner"></div>
+                </div>
+                <div className="right-item">
+                    <LiveItem data={item}/>
+                </div>
+            </div>
+        )
+    }
     _preRender=()=>{
         return(
             <div style={{width:0}}>
@@ -126,20 +140,7 @@ export default class TimeLine extends Component {
         )
 
     }
-    _renderRightItem=(item,index)=>{
-        return(
-            <div key={index} className="item">
-                <div className="corner">
-                    <div className="right-icon"></div>
-                    <div className="right-line"></div>
-                    <div className="right-corner"></div>
-                </div>
-                <div className="right-item">
-                    <LiveItem data={item}/>
-                </div>
-            </div>
-        )
-    }
+
     render() {
         return (
             <div  className="TimeLine">
