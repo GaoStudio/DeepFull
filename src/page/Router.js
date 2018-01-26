@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react';
 import Home from './Home'
+import Firstpage from './../page/router/FirstPage'
 import {
     BrowserRouter as Router,
     Route,

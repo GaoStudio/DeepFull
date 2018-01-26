@@ -22,7 +22,6 @@
     display: inline-block;
     margin: 0 auto;
     width: 50%;
-
 }
 .logo-img a img{
     width: 100%;
@@ -156,4 +155,10 @@
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
+}
+@media screen and (max-width: 920px) {
+    .logo-img a{
+        width: 30%;
+        min-height: 400px;
+    }
 }

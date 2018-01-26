@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: row;
 }
+.drawer{
+    background: #F9F9F9;
+    boxShadow: "rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px"
+}
 .left{
     color: #adadad;
     font-size: 100%;
@@ -18,4 +22,24 @@
 .right-content{
     margin-right: 15px;
     margin-left: 15px;
+}
+@media screen and (max-width: 920px) {
+    .container{
+        margin: 0 auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        color: #adadad;
+        font-size: 100%;
+        max-width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .logo-img a img{
+        width: 50%;
+    }
 }

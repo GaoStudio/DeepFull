@@ -2,7 +2,9 @@
  * Created by gao on 2017-12-10.
  */
 import React, {Component} from 'react';
+import Drawer from 'react-motion-drawer';
 import './Home.css';
+import './home/Menu.css';
 import Menu from './home/Menu'
 import Post from './home/Post'
 import About from './home/About'
@@ -10,11 +12,32 @@ import Nopage from './home/Nopage'
 import {
     Route,
     Redirect,
-    Switch
+    Switch,
+    Link
 } from 'react-router-dom'
+import { enquireScreen } from './../utils/common';
 import Article from "./home/Article";
 import TimeLine from "./home/TimeLine";
+let isMobile;
+enquireScreen((b) => {
+    isMobile = b;
+});
 class Home extends Component {
+    constructor(props) {
+        super(props)
+        this.state={
+            openLeft:false,
+            isMobile: false,
+
+        }
+    }
+    componentDidMount(){
+        enquireScreen((mobile) => {
+            this.setState({
+                isMobile: mobile,
+            });
+        });
+    }
     componentWillReceiveProps(nextProps){
         //当路由切换时,回到顶部
         //console.log(this.props.location)
@@ -25,9 +48,13 @@ class Home extends Component {
     render(){
         return(
             <div className="container">
-                <div className="left">
-                    <Menu location={this.props.location}/>
-                </div>
+                {this.state.isMobile? <div className="top">
+                    <header className="logo">
+                        <div className="logo-img"><a><img src={require("../images/headlogo.png")}  ></img></a></div>
+                        <div  className="logo-name" ><strong>Take the orange run</strong></div>
+                    </header>
+                </div>:<div className="left"><Menu location={this.props.location}/></div>}
+
                 <div className="right">
                     <div className="right-content">
                         <Switch>

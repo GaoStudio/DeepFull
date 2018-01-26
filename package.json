@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^2.13.2",
+    "enquire.js": "^2.1.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-markdown": "^3.1.4",
+    "react-motion-drawer": "^2.1.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.13",
-    "react-transition-group": "^1.2.0",
-    "react-syntax-highlighter": "6.1.2"
+    "react-syntax-highlighter": "6.1.2",
+    "react-transition-group": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
