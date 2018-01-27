@@ -31,8 +31,7 @@ export default class FirstPage extends Component {
                     width={this.state.width}
                     fadeOut={true}
                     open={openLeft}
-                    onChange={open => this.setState({ openLeft: open })}
-                >
+                    onChange={open => this.setState({ openLeft: open })}>
                     <div style={{ padding: "2em" }}>
                         <h3>Navigation</h3>
                     </div>

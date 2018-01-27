@@ -74,3 +74,22 @@
     background-position: 0 -443px;
     color: #333;
 }
+@media screen and (max-width: 920px) {
+    .post-list-content{
+        padding: 10px;
+    }
+    .post-list-operation{
+        padding: 8px 10px;
+    }
+    .post-list-item{
+        margin-bottom: 15px;
+    }
+    .post-list-title{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post-list-simple{
+        max-height: 40px;
+        overflow: hidden;
+    }
+}

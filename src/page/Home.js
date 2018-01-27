@@ -45,16 +45,21 @@ class Home extends Component {
             window.scrollTo(0,0)
         }
     }
+    _onMobileMenuClick = ()=>{
+
+    }
     render(){
         return(
             <div className="container">
-                {this.state.isMobile? <div className="top">
-                    <header className="logo">
-                        <div className="logo-img"><a><img src={require("../images/headlogo.png")}  ></img></a></div>
-                        <div  className="logo-name" ><strong>Take the orange run</strong></div>
-                    </header>
-                </div>:<div className="left"><Menu location={this.props.location}/></div>}
-
+                {this.state.isMobile?
+                    <div className="top">
+                        <header className="logo">
+                            <div className="mobile-menu-icon" onClick={this._onMobileMenuClick}><img src={require("../images/menu.png")}  ></img></div>
+                            <div className="logo-img"><a><img src={require("../images/headlogo.png")}  ></img></a></div>
+                            <div  className="logo-name" ><strong>Take the orange run</strong></div>
+                        </header>
+                    </div>:
+                    <div className="left"><Menu location={this.props.location}/></div>}
                 <div className="right">
                     <div className="right-content">
                         <Switch>
