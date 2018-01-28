@@ -6,6 +6,7 @@ import Drawer from 'react-motion-drawer';
 import './Home.css';
 import './home/Menu.css';
 import Menu from './home/Menu'
+import MobileMenu from './home/MobileMenu'
 import Post from './home/Post'
 import About from './home/About'
 import Nopage from './home/Nopage'
@@ -46,11 +47,22 @@ class Home extends Component {
         }
     }
     _onMobileMenuClick = ()=>{
-
+        this.setState({ openLeft: true })
     }
     render(){
         return(
             <div className="container">
+                {this.state.isMobile?<Drawer
+                    width={"70%"}
+                    open={this.state.openLeft}
+                    overlayColor={"rgba(0,0,0,0.6)"}
+                    npTouchClose={true}
+                    drawerStyle = {{backgroundColor:'#4c4c4c'}}
+                    onChange={open => this.setState({ openLeft: open })}>
+                    <div>
+                      <MobileMenu location={this.props.location}/>
+                    </div>
+                </Drawer>:null}
                 {this.state.isMobile?
                     <div className="top">
                         <header className="logo">
