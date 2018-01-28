@@ -76,8 +76,8 @@ class MobileMenu extends Component {
                         }
                         <div className="nav-search">
                             <div className="search">
-                                <input id="searchContent" placeholder="请输入关键词" type="text" />
-                                <input value="" id="searchSubmit" type="submit" />
+                                <input className="searchContent" placeholder="请输入关键词" type="text" />
+                                <input value="" className="searchSubmit" type="submit" />
                             </div>
                         </div>
                     </div>

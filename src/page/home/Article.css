@@ -44,8 +44,9 @@ table {
      border-spacing: 0px;
      border-color: grey;
 }
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 960px) {
     .articleContent {
         padding: 10px;
+        font-size: 12px;
     }
 }
