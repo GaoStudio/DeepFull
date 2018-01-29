@@ -5,7 +5,7 @@ export function enquireScreen(cb, str) {
             cb && cb(true);
         },
         unmatch: function unmatch() {
-            cb && cb();
+            cb && cb(false);
         }
     });
 }

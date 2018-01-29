@@ -81,6 +81,9 @@ export default class TimeLine extends Component {
         this.rightHeight=0;
     }
     componentDidMount() {
+        this._onLayout();
+    }
+    _onLayout=()=>{
         for (let i=0;i<this.state.data.length;i++){
             if(this.leftHeight<=this.rightHeight){
                 this.state.leftComponent.push(this.state.data[i])
@@ -146,20 +149,33 @@ export default class TimeLine extends Component {
             <div  className="TimeLine">
                 {this.state.visibility?this._preRender():null}
                 <div className="spinerLine"></div>
-                <div ref={(ref)=>{ this.leftRef=ref}} style={{width:'50%',backgroundColor:'#fff0',minHeight:20}}>
-                    {
-                        this.state.leftComponent.map((item,index)=>{
-                            return (this._renderLeftItem(item,index))
-                        })
-                    }
-                </div>
-                <div  ref={(ref)=>{ this.rightRef=ref}} style={{width:'50%',backgroundColor:'#fff0',minHeight:20}}>
-                    {
-                        this.state.rightComponent.map((item,index)=>{
-                            return (this._renderRightItem(item,index))
-                        })
-                    }
-                </div>
+                {!this.props.isMobile?
+                    <div ref={(ref)=>{ this.leftRef=ref}} className="spinerItem">
+                        {
+                            this.state.leftComponent.map((item,index)=>{
+                                return (this._renderLeftItem(item,index))
+                            })
+                        }
+                    </div>:
+                    null
+                }
+                {
+                    !this.props.isMobile?
+                        <div  ref={(ref)=>{ this.rightRef=ref}} className="spinerItem">
+                            {
+                                this.state.rightComponent.map((item,index)=>{
+                                    return (this._renderRightItem(item,index))
+                                })
+                            }
+                        </div>:
+                        <div  ref={(ref)=>{ this.rightRef=ref}} className="spinerItem">
+                            {
+                                this.state.data.map((item,index)=>{
+                                    return (this._renderRightItem(item,index))
+                                })
+                            }
+                        </div>
+                }
 
             </div>
         );

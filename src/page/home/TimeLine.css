@@ -15,6 +15,11 @@
     z-index: 1;
     border: dotted 1px #acb7c0;
 }
+.spinerItem{
+    width:50%;
+    backgroundColor:'#fff0';
+    minHeight:20
+}
 .left-item{
     background-color: rgba(0,0,0,0.7);
     flex: 1;
@@ -91,5 +96,16 @@
 }
 .corner2{
     top: 40px;
+}
+@media screen and (max-width: 960px) {
+    .spinerItem{
+        width:100%;
+    }
+    .spinerLine{
+        left: 0;
+    }
+    .corner2{
+        top: 20px;
+    }
 }
 
