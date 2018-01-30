@@ -9,4 +9,30 @@
 }
 .liveItemContainer{
     margin: 20px;
+    font-size: 15px;
+    color: #d1d1d1;
+}
+.liveItemfootbar {
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-top: solid 1px #DDD;
+    margin: 10px 0 0 0;
+    border-color: rgb(31, 31, 33);
+    padding: 10px 0 0 0;
+}
+.liveItemfootbar-time{
+    opacity: 0.6;
+}
+.liveItemfootbar-address {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    float: right;
+    opacity: 0.6;
+}
+.liveItemMusic{
+
 }
