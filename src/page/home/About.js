@@ -6,7 +6,7 @@ import './Post.css';
 class About extends Component {
     render(){
         return(
-            <div>
+            <div style={{backgroundColor:'#f00'}}>
                 About Me
             </div>
         )

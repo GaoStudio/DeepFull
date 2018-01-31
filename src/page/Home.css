@@ -16,6 +16,10 @@
     max-width: 333px;
     flex: 1;
 }
+.left-content{
+    margin-right: 15px;
+    margin-left: 15px;
+}
 .right{
     flex: 2;
 }

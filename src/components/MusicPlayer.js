@@ -5,8 +5,9 @@ class MusicPlayer extends Component {
         return (
             <div className="MusicPlayer">
                 <div className="MusicPlayerWrapper">
-                    <img className="MusicPlayerImg" src={require('../images/cover.png')} />
+                    <div className="MusicPlayerImg" ><img src={require('../images/cover.png')} /></div>
                     <div className="MusicPlayerControl">
+                        <div className="MusicPlayerControlLeft"></div>
                         <div className="MusicPlayerControlWrapper">
                             <div className="MusicPlay">
                                 <div className="MusicPlayButton">
@@ -25,6 +26,7 @@ class MusicPlayer extends Component {
                                 </div>
                             </div>
                         </div>
+                        <div className="MusicPlayerControlRight"> </div>
 
                     </div>
                 </div>

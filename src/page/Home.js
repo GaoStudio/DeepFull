@@ -72,7 +72,7 @@ class Home extends Component {
                             <div  className="logo-name" ><strong>Take the orange run</strong></div>
                         </header>
                     </div>:
-                    <div className="left"><Menu location={this.props.location}/></div>}
+                    <div className="left"> <div className="left-content"><Menu location={this.props.location}/></div></div>}
                 <div className="right">
                     <div className="right-content">
                         <Switch>

@@ -9,8 +9,6 @@ class Post extends Component {
         return(
             <div>
                 <Item location={this.props.location}/>
-                <Item location={this.props.location}/>
-                <Item location={this.props.location}/>
             </div>
         )
     }

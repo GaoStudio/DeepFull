@@ -53,7 +53,7 @@ class Menu extends Component {
     render() {
         let _this = this;
         return (
-                <div className="left-content">
+                <div>
                     <header className="logo">
                         <div className="logo-img"><Link to={{pathname:`/${ this.state.categoryList[0]&&this.state.categoryList[0].bCategory_path}`,state:this.state.categoryList[0]}}><img src={require("../../images/headlogo.png")}  ></img></Link></div>
                         <div  className="logo-name" ><strong>Take the orange run</strong></div>
