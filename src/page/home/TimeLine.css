@@ -3,7 +3,6 @@
     display: flex;
     flex: 1;
     position: relative;
-    background-color: #ff0000;
     flex-direction: row;
 }
 .spinerLine{
