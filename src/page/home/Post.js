@@ -14,18 +14,17 @@ class Post extends Component {
         }
     }
     componentDidMount(){
-        this.loadData();
+        let path = this.props.location.state? this.props.location.state.bCategory_path: this.props.match.params.path;
+        this.loadData(path);
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.location&&nextProps.location.state){
-            this.loadData();
+            let path = nextProps.location.state?nextProps.location.state.bCategory_path:nextProps.match.params.path;
+            this.loadData(path);
         }
     }
-    loadData=()=>{
+    loadData=(path)=>{
         NProgress.start()
-        console.log(this.props)
-        let path = this.props.location.state?this.props.location.state.bCategory_path:this.props.match.params.path;
-        console.log(path)
         GET("blog/blogs?path="+path,(data)=>{
             if(data&&data.status===0){
                 NProgress.done()

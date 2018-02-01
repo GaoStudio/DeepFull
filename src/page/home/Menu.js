@@ -21,6 +21,7 @@ class Menu extends Component {
         this.loadData();
     }
     componentWillReceiveProps(nextProps){
+        console.log(nextProps)
         if(nextProps.location&&nextProps.location.state){
            this.setState({
                select:nextProps.location.state.bCategory_id
