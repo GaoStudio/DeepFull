@@ -5,69 +5,65 @@ import React, {Component} from 'react';
 import Markdown from 'react-markdown'
 import CodeBlock from '../../components/CodeLock'
 import './Article.css';
-const initialSource = `
-# Live demo
-![mahua](../../image/glass.gif)
-
-Changes are automatically rendered as you type.
-
-* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no \`dangerouslySetInnerHTML\` is used! Yay!
-
-## HTML block below
-
-<blockquote>
-  This blockquote will change based on the HTML settings above.
-</blockquote>
-
-## How about some code?
-\`\`\`js
-var React = require('react');
-var Markdown = require('react-markdown');
-
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-\`\`\`
-
-Pretty neat, eh?
-
-## Tables?
-
-| Feature | Support |
-| ------ | ----------- |
-| tables | ✔ |
-| alignment | ✔ |
-| wewt | ✔ |
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
-`
+import NProgress from "nprogress";
+import {GET} from "../../utils/request";
+const initialSource = ''
 
 export default class Article extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            markdownSrc: initialSource,
+            blog:null,
             htmlMode: 'raw'
         }
     }
-
+    componentDidMount(){
+        console.log(this.props)
+        let path = this.props.match.params.post;
+        this.loadData(path);
+    }
+    componentWillReceiveProps(nextProps){
+        let path = nextProps.match.params.post;
+        this.loadData(path);
+    }
+    loadData=(path)=>{
+        NProgress.start()
+        GET("blog/blog?blogid="+path,(data)=>{
+            if(data&&data.status===0){
+                NProgress.done()
+                console.log(data)
+                this.setState({
+                    blog:data.data,
+                })
+            }else {
+                NProgress.done()
+            }
+        },(err)=>{
+            NProgress.done()
+        })
+    }
     render() {
+        if(!this.state.blog){
+            return <div></div>
+        }
         return (
             <div className="article">
+                <div className="articleTitle">
+                    <div className="articleName">{this.state.blog.blogBasic.bblog_title}</div>
+                    <div className="articleDetail">
+                        <span className="articleMark">{this.state.blog.blogBasic.bblog_time}</span>
+                        <span className="articleMarkBy">BY</span>
+                        <span className="articleMark">gaowei</span>
+                        <span className="articleMarkBy"> - </span>
+                        <span className="articleMark">{this.state.blog.blogBasic.bblog_views}</span>
+                        <span className="articleMarkView">VIEWS</span>
+                    </div>
+                    <div className="articleDetailLine"></div>
+                </div>
                 <div className="articleContent">
                     <Markdown
                         className="result"
-                        source={this.state.markdownSrc}
+                        source={this.state.blog.blog_content}
                         skipHtml={this.state.htmlMode === 'skip'}
                         escapeHtml={this.state.htmlMode === 'escape'}
                         renderers={{code: CodeBlock}}

@@ -8,9 +8,11 @@
     height: 30px;
 }
 .liveItemContainer{
-    margin: 20px;
     font-size: 15px;
     color: #d1d1d1;
+}
+.liveItemContent{
+    margin: 15px;
 }
 .liveItemfootbar {
     width: 100%;
@@ -35,4 +37,9 @@
 }
 .liveItemMusic{
 
+}
+@media screen and (max-width: 960px) {
+    .liveItemContent{
+        margin: 8px;
+    }
 }

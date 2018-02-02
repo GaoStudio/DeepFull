@@ -1,0 +1,23 @@
+.ImageContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ImageContainerLine{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+.ImageType3{
+    width: 30%;
+    height:0px;
+    position:relative;
+    padding-bottom:30%;
+}
+.ImageType3 img{
+    width: 100%;
+    height:100%;
+    position:absolute;
+}

@@ -5,71 +5,14 @@
 import React, {Component} from 'react';
 import LiveItem from '../../components/LiveItem'
 import './TimeLine.css'
+import NProgress from "nprogress";
+import {GET} from "../../utils/request";
 export default class TimeLine extends Component {
     constructor(props) {
         super(props)
         this.state= {
             height: [200, 320, 430, 150, 230, 100, 320, 430, 200, 150, 100, 200, 320],
-            data:[
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis?SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。 ',
-                    imgs:[],
-                    time:'2018-2-1 11:11:11'
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis? ',
-                    imgs:[],
-                    time:'2018-1-11 11:11:11'
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis?SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。 ',
-                    imgs:[],
-                    time:'2018-1-05 11:11:11'
-                },
-                {
-                    type:'year',
-                    content:'2017',
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis?SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。 ',
-                    imgs:[],
-                    time:'2017-12-1 11:11:11'
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis? ',
-                    imgs:[],
-                    time:'2017-11-11 11:11:11'
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis?SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。 ',
-                    imgs:[],
-                    time:'2017-10-05 11:11:11'
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis?SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。 ',
-                    imgs:[],
-                    time:'2017-9-19 11:11:11'
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis? ',
-                    imgs:[],
-                    time:'2018-8-11 11:11:11'
-                },
-                {
-                    type:'diary',
-                    content:'  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad architecto cumque deserunt distinctio doloremque dolores eos impedit minus nam natus qui, sapiente sed ullam, vel velit voluptatem? Veritatis?SmohanTimeLine是一款基于原生JavaScript的支持移动端的时间轴插件，大小仅仅4KB。需要简单的配置，就可以完成你的时间轴，记录流转的时光。 ',
-                    imgs:[],
-                    time:'2018-7-05 11:11:11'
-                },
-            ],
+            data:[],
             leftComponent:[],
             rightComponent:[],
             visibility:true
@@ -80,8 +23,25 @@ export default class TimeLine extends Component {
         this.leftHeight=0;
         this.rightHeight=0;
     }
-    componentDidMount() {
-        this._onLayout();
+    componentDidMount(){
+        this.loadData();
+    }
+    loadData=()=>{
+        NProgress.start()
+        GET("blog/timeline",(data)=>{
+            if(data&&data.status===0){
+                NProgress.done()
+                console.log(data)
+                this.setState({
+                    data:data.data,
+                })
+                this._onLayout();
+            }else {
+                NProgress.done()
+            }
+        },(err)=>{
+            NProgress.done()
+        })
     }
     _onLayout=()=>{
         for (let i=0;i<this.state.data.length;i++){

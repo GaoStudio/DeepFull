@@ -34,10 +34,6 @@ class MusicPlayer extends Component {
                     <div className="loaded"></div>
                     <div className="current"></div>
                     <img className="control" src={require('../images/handle.png')}></img>
-                    <span className="float">
-                        <span className="float-current">00:16</span>
-                        <span className="float-corner"></span>
-                    </span>
                 </div>
             </div>
         )

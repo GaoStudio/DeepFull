@@ -1,19 +1,23 @@
 import React, {Component} from 'react';
 import './components.css';
 import MusicPlayer from "./MusicPlayer";
+import ImageContainer from "./ImageContainer";
 class LiveItem extends Component {
     render(){
         return(
             <div className="liveItemContainer">
-                {this.props.data.content}
-                <MusicPlayer />
-                <div className="liveItemfootbar">
-                    <span className="liveItemfootbar-time">30 April 2015, Sunday</span>
-                    <span className="liveItemfootbar-address">Beijing</span>
-                </div>
                 <div  className="liveItemMusic">
-
+                    <MusicPlayer />
                 </div>
+                <div className="liveItemContent">
+                    <ImageContainer images={[require('../images/img4.jpg'),require('../images/img5.jpg'),require('../images/img6.jpg')]}/>
+                    {this.props.data.timeline_content}
+                    <div className="liveItemfootbar">
+                        <span className="liveItemfootbar-time">{this.props.data.timeline_time}</span>
+                        <span className="liveItemfootbar-address">{this.props.data.timeline_address}</span>
+                    </div>
+                </div>
+
             </div>
         )
     }
