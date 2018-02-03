@@ -10,7 +10,7 @@ class LiveItem extends Component {
                     <MusicPlayer />
                 </div>
                 <div className="liveItemContent">
-                    <ImageContainer images={[require('../images/img4.jpg'),require('../images/img5.jpg'),require('../images/img6.jpg')]}/>
+                    <ImageContainer images={[require('../images/img4.jpg')]}/>
                     {this.props.data.timeline_content}
                     <div className="liveItemfootbar">
                         <span className="liveItemfootbar-time">{this.props.data.timeline_time}</span>
