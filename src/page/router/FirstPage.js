@@ -11,17 +11,18 @@ export default class FirstPage extends Component {
     }
     render() {
         return (
+
             <div>
                 <ImageZoom
                     image={{
-                        src: 'nz.jpg',
+                        src: 'http://www.baidu.com/img/bd_logo1.png',
                         alt: 'Picture of Mt. Cook in New Zealand',
                         style: {
                             width: '20em'
                         }
                     }}
                     zoomImage={{
-                        src: 'nz-big.jpg',
+                        src: 'http://www.baidu.com/img/bd_logo1.png',
                         alt: 'Picture of Mt. Cook in New Zealand',
                     }}
                 />
