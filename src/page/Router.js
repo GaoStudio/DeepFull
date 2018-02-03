@@ -14,7 +14,7 @@ class RootRoute extends Component {
         return(
             <Router>
                 <Switch>
-                    <Route path="/" render={props => <Firstpage {...props}/>} />
+                    <Route path="/" render={props => <Home {...props}/>} />
                 </Switch>
             </Router>
         )

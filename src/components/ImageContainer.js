@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './ImageContainer.css';
+import ImageZoom from 'react-medium-image-zoom'
 export default class ImageContainer extends Component {
     constructor(props){
         super(props)
@@ -39,7 +40,17 @@ export default class ImageContainer extends Component {
         console.log('_renderImage1')
         return(
             <div className="ImageType">
-                <img className="ImageImg" src={this.state.images[0]}/>
+                <ImageZoom
+                    image={{
+                        src: this.state.images[0],
+                        alt: 'Picture of Mt. Cook in New Zealand',
+                        className:"ImageImg",
+                    }}
+                    zoomImage={{
+                        src: this.state.images[0],
+                        alt: 'Picture of Mt. Cook in New Zealand',
+                    }}
+                />
             </div>
         )
     }
