@@ -14,7 +14,19 @@ export default class ImageContainer extends Component {
             for(let i = 0;i<length;i++) {
                 views.push(
                     <div className="ImageType3">
-                        {this.state.images[current*3+i]!=undefined?<img className="ImageImg" src={this.state.images[current*3+i]}/>:null}
+                        {this.state.images[current*3+i]!=undefined?
+                            <ImageZoom
+                                image={{
+                                    src: this.state.images[current*3+i],
+                                    alt: 'Picture of Mt. Cook in New Zealand',
+                                    className:'ImageImg'
+                                }}
+                                zoomImage={{
+                                    src: this.state.images[current*3+i],
+                                    alt: 'Picture of Mt. Cook in New Zealand',
+                                }}
+                            />
+                            :null}
                     </div>
                 )
             }
@@ -44,7 +56,7 @@ export default class ImageContainer extends Component {
                     image={{
                         src: this.state.images[0],
                         alt: 'Picture of Mt. Cook in New Zealand',
-                        className:"ImageImg",
+                        className:'ImageImg'
                     }}
                     zoomImage={{
                         src: this.state.images[0],
@@ -66,7 +78,17 @@ export default class ImageContainer extends Component {
                             this.state.images.slice(i*2,(i+1)*2).map((item) => {
                             return (
                                 <div className="ImageType2">
-                                    <img className="ImageImg" src={item}/>
+                                    <ImageZoom
+                                        image={{
+                                            src: item,
+                                            alt: 'Picture of Mt. Cook in New Zealand',
+                                            className:'ImageImg'
+                                        }}
+                                        zoomImage={{
+                                            src: item,
+                                            alt: 'Picture of Mt. Cook in New Zealand',
+                                        }}
+                                    />
                                 </div>
                             )
                         })}

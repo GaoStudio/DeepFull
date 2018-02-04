@@ -106,7 +106,7 @@ export default class TimeLine extends Component {
 
     render() {
         return (
-            <div  className="TimeLine">
+            <div className="TimeLine">
                 {this.state.visibility?this._preRender():null}
                 <div className="spinerLine"></div>
                 {!this.props.isMobile?

@@ -16,21 +16,37 @@
     height:0px;
     padding-bottom:50%;
     margin-bottom: 3%;
+    overflow: hidden;
 }
 .ImageType2{
     width: 47%;
     height:0px;
     position:relative;
+    overflow: hidden;
     padding-bottom:47%;
 }
 .ImageType3{
     width: 30%;
     height:0px;
     position:relative;
+    overflow: hidden;
     padding-bottom:30%;
 }
-.ImageImg{
+.ImageType3 .ImageImg{
     width: 100%;
-    height:100%;
-    position:absolute;
+    height:auto;
+    position: absolute;
+    top: -20%;
+}
+.ImageType2 .ImageImg{
+    width: 100%;
+    height:auto;
+    position: absolute;
+    top: -30%;
+}
+.ImageType .ImageImg{
+    width: 100%;
+    height:auto;
+    position: absolute;
+    top: -60%;
 }
