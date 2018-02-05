@@ -76,7 +76,7 @@
     width: 100%;
     flex-direction: row;
 }
-.MusicPlayerControl .MusicPlay button{
+.MusicPlayerControl .MusicPlay span{
     width: 21px;
     height: 21px;
     border:none;
@@ -85,7 +85,7 @@
 .MusicPlayPause{
     background-position:0 -21px;
 }
-.MusicPlayerControl .SoundPlay button{
+.MusicPlayerControl .SoundPlay span{
     width: 14px;
     height: 12px;
     border:none;
@@ -172,13 +172,13 @@
     -webkit-border-radius: 0px 0px 3px 3px;
     -moz-border-radius: 0px 0px 3px 3px;
     border-radius: 0px 0px 3px 3px;
-    width: 80px;
+    width: 0px;
     height: 100%;
 }
 .MusicPlayerProgress  .control{
     position: absolute;
     top: -4px;
-    left: 80px;
+    left: -2px;
     width: 12px;
     height: 14px;
 }

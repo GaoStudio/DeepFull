@@ -7,7 +7,7 @@ class LiveItem extends Component {
         return(
             <div className="liveItemContainer">
                 <div  className="liveItemMusic">
-                    <MusicPlayer />
+                    <MusicPlayer data={this.props.data.timeMusic}/>
                 </div>
                 <div className="liveItemContent">
                     <ImageContainer images={[require('../images/beijing.jpg')]}/>
