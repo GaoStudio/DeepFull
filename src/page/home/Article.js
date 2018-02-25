@@ -28,7 +28,7 @@ export default class Article extends Component {
     }
     loadData=(path)=>{
         NProgress.start()
-        GET("blog/blog?blogid="+path,(data)=>{
+        GET("api/blog/blog?blogid="+path,(data)=>{
             if(data&&data.status===0){
                 NProgress.done()
                 console.log(data)

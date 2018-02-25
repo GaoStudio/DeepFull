@@ -33,7 +33,7 @@ class Menu extends Component {
         }
     }
     loadData=()=>{
-        GET("blog/category",(data)=>{
+        GET("api/blog/category",(data)=>{
             if(data&&data.status===0){
                 this.setState({
                     categoryList:data.data,

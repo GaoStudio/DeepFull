@@ -25,7 +25,7 @@ class Post extends Component {
     }
     loadData=(path)=>{
         NProgress.start()
-        GET("blog/blogs?path="+path,(data)=>{
+        GET("api/blog/blogs?path="+path,(data)=>{
             if(data&&data.status===0){
                 NProgress.done()
                 this.setState({
