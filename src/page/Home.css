@@ -23,6 +23,7 @@
 .right{
     flex: 2;
     position: relative;
+    max-width: 867px;
 }
 .right-content{
     margin-right: 15px;

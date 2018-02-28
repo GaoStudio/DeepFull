@@ -6,13 +6,15 @@ import './Item.css';
 import {
     Link,
 } from 'react-router-dom'
+import {host} from "../../utils/request";
+
 class Item extends Component {
     render() {
         return(
             <div className="post-list-item">
                 <Link className='post-link' to={{pathname:`${this.props.location.pathname}/${this.props.data.bblog_id}`}}>
                     <div className="post-list-content">
-                        {this.props.data.bblog_logo?<img style={{width:'100%'}} src={this.props.data.bblog_logo}></img>:null}
+                        {this.props.data.bblog_logo?<img style={{width:'100%'}} src={host+this.props.data.bblog_logo}></img>:null}
                         <div className="post-list-title">{this.props.data.bblog_title}</div>
                         <div className="post-list-simple">{this.props.data.bblog_sub_title}</div>
                     </div>
