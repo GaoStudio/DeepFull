@@ -43,7 +43,7 @@ class MusicPlayer extends Component {
         return (
             <div className="MusicPlayer">
                 <div className="MusicPlayerWrapper">
-                    <div className="MusicPlayerImg" ><img src={this.state.data.tmusic_img} /></div>
+                    <div className="MusicPlayerImg" ><img src={this.state.data.music_img} /></div>
                     <div className="MusicPlayerControl">
                         <div className="MusicPlayerControlLeft"></div>
                         <div className="MusicPlayerControlWrapper">
@@ -51,7 +51,7 @@ class MusicPlayer extends Component {
                                 <div className="MusicPlayButton" onClick={this._play}>
                                     <span  aria-controls="mep_0" title="Play/Pause"></span>
                                 </div>
-                                <div className="MusicPlayerName">{this.state.data.tmusic_name} -- {this.state.data.tmusic_star}</div>
+                                <div className="MusicPlayerName">{this.state.data.music_name} -- {this.state.data.music_star}</div>
                             </div>
                             <div className="SoundPlay">
                                 <div className="MusicPlayButton">
@@ -73,7 +73,7 @@ class MusicPlayer extends Component {
                     <div className="current" ref="played"></div>
                     <img className="control" src={require('../images/handle.png')}></img>
                 </div>
-                <audio src={this.state.data.tmusic_src} ref={(ref)=>{ this.audio=ref}} crossOrigin="anonymous"></audio>
+                <audio src={this.state.data.music_src} ref={(ref)=>{ this.audio=ref}} crossOrigin="anonymous"></audio>
             </div>
         )
     }
