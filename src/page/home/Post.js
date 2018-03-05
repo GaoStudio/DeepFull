@@ -42,11 +42,10 @@ class Post extends Component {
         return(
             <div>
                 {
-                    this.state.blogList.map((item)=>{
+                    this.state.blogList.length>0?this.state.blogList.map((item)=>{
                         return <Item key={item.bblog_id} data={item} location={this.props.location}/>
-                    })
+                    }): <Item location={this.props.location}/>
                 }
-
             </div>
         )
     }
