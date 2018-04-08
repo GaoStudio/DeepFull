@@ -5,8 +5,8 @@
     background: rgba(0,0,0,0.7);
 }
 .logo{
-    background-image: url("../../images/bannertop.png");
-    padding: 28px 30px 24px;
+    background-image: url("../../images/bannertop.jpg");
+    padding: 28px 30px 45px;
     background-repeat: no-repeat;
     position: relative;
     background-size:100%;
@@ -19,7 +19,7 @@
 .logo-img a{
     display: inline-block;
     margin: 0 auto;
-    width: 50%;
+    width: 30%;
 }
 .logo-img a img{
     width: 100%;
@@ -165,7 +165,7 @@
         max-height: 300px;
     }
     .logo-img a{
-        width: 30%;
+        width: 20%;
     }
     .nav-menu{
         padding: 0px;
