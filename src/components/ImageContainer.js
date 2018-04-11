@@ -5,8 +5,28 @@ import {host} from '../utils/request'
 export default class ImageContainer extends Component {
     constructor(props){
         super(props)
-        this.state={
-            images:this.props.images
+        this.state= {
+            images: this.props.images,
+            widthHeight: [],
+
+        }
+    }
+    componentDidMount(){
+        let widthHeightTemp = [];
+        let end = 0;
+        for(let i = 0;i<this.props.images.length;i++){
+            var img_url = host+this.props.images[i];
+            var img = new Image();
+            img.src = img_url;
+            img.onload = function(){
+                widthHeightTemp.push({x:img.width,y:img.height})
+                end++;
+                if(end=this.props.images.length){
+                    this.setState({
+                        widthHeight:widthHeightTemp
+                    })
+                }
+            };
         }
     }
     _renderImage=(current,length)=>{
@@ -73,25 +93,30 @@ export default class ImageContainer extends Component {
         let views =[];
         {
             for(let i = 0;i<len;i++) {
+
                 views.push(
                     <div className="ImageContainerLine">
                         {
                             this.state.images.slice(i*2,(i+1)*2).map((item) => {
-                            return (
-                                <div className="ImageType2">
-                                    <ImageZoom
-                                        image={{
-                                            src: host+item,
-                                            alt: 'Picture of Mt. Cook in New Zealand',
-                                            className:'ImageImg'
-                                        }}
-                                        zoomImage={{
-                                            src: host+item,
-                                            alt: 'Picture of Mt. Cook in New Zealand',
-                                        }}
-                                    />
-                                </div>
-                            )
+                                let widthTheight = true;
+                                if(this.state.widthHeight>0){
+                                    this.state.widthHeight[i].x<this.state.widthHeight[i].x?widthTheight=false:widthTheight=true
+                                }
+                                return (
+                                    <div className="ImageType2">
+                                        <ImageZoom
+                                            image={{
+                                                src: host+item,
+                                                alt: 'Picture of Mt. Cook in New Zealand',
+                                                className:widthTheight?'ImageImgV':'ImageImgH'
+                                            }}
+                                            zoomImage={{
+                                                src: host+item,
+                                                alt: 'Picture of Mt. Cook in New Zealand',
+                                            }}
+                                        />
+                                    </div>
+                                )
                         })}
                     </div>
                 )
@@ -101,6 +126,7 @@ export default class ImageContainer extends Component {
     }
     render() {
         let length = this.state.images.length;
+
         return (
             <div className="ImageContainer">
                 {

@@ -38,7 +38,13 @@
     position: absolute;
     top: -20%;
 }
-.ImageType2 .ImageImg{
+.ImageType2 .ImageImgV{
+    width: 100%;
+    height:auto;
+    position: absolute;
+    top: -30%;
+}
+.ImageType2 .ImageImgH{
     width: 100%;
     height:auto;
     position: absolute;
