@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './ImageContainer.css';
 import ImageZoom from 'react-medium-image-zoom'
+import {host} from '../utils/request'
 export default class ImageContainer extends Component {
     constructor(props){
         super(props)
@@ -17,12 +18,12 @@ export default class ImageContainer extends Component {
                         {this.state.images[current*3+i]!=undefined?
                             <ImageZoom
                                 image={{
-                                    src: this.state.images[current*3+i],
+                                    src: host+this.state.images[current*3+i],
                                     alt: 'Picture of Mt. Cook in New Zealand',
                                     className:'ImageImg'
                                 }}
                                 zoomImage={{
-                                    src: this.state.images[current*3+i],
+                                    src: host+this.state.images[current*3+i],
                                     alt: 'Picture of Mt. Cook in New Zealand',
                                 }}
                             />
@@ -54,12 +55,12 @@ export default class ImageContainer extends Component {
             <div className="ImageType">
                 <ImageZoom
                     image={{
-                        src: this.state.images[0],
+                        src: host+this.state.images[0],
                         alt: 'Picture of Mt. Cook in New Zealand',
                         className:'ImageImg'
                     }}
                     zoomImage={{
-                        src: this.state.images[0],
+                        src: host+this.state.images[0],
                         alt: 'Picture of Mt. Cook in New Zealand',
                     }}
                 />
@@ -80,12 +81,12 @@ export default class ImageContainer extends Component {
                                 <div className="ImageType2">
                                     <ImageZoom
                                         image={{
-                                            src: item,
+                                            src: host+item,
                                             alt: 'Picture of Mt. Cook in New Zealand',
                                             className:'ImageImg'
                                         }}
                                         zoomImage={{
-                                            src: item,
+                                            src: host+item,
                                             alt: 'Picture of Mt. Cook in New Zealand',
                                         }}
                                     />
@@ -100,7 +101,6 @@ export default class ImageContainer extends Component {
     }
     render() {
         let length = this.state.images.length;
-        console.log(length)
         return (
             <div className="ImageContainer">
                 {

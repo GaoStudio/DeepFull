@@ -79,15 +79,10 @@ class Menu extends Component {
                                 </div>
                             </div>
                         }
-                        <div className="nav-search">
-                            <div className="search">
-                                <input className="searchContent" placeholder="请输入关键词" type="text" />
-                                <input value="" className="searchSubmit" type="submit" />
-                            </div>
-                        </div>
+
                     </div>
                     <footer className="footer">
-                        <Link to="/about"><div style={{color:'#999'}}>About Me</div></Link>
+                        <Link style={{color:'#999'}} to="/about"><div style={{color:'#999'}}>About Me</div></Link>
                         <div>©DeepFull.com</div>
                     </footer>
                 </div>

@@ -1,7 +1,7 @@
 /**
  * GET请求
  **/
-export const host = 'http://api.deepfull.com/'
+export const host = 'http://localhost:8080/'
 export function GET(url,callBackSuccess,callBackError){
     let uri = host+url;
     let options = {
