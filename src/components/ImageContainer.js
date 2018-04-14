@@ -14,15 +14,17 @@ export default class ImageContainer extends Component {
     componentDidMount(){
         let widthHeightTemp = [];
         let end = 0;
+        let _this = this;
         for(let i = 0;i<this.props.images.length;i++){
-            var img_url = host+this.props.images[i];
-            var img = new Image();
+            let img_url = host+this.props.images[i];
+            let img = new Image();
             img.src = img_url;
             img.onload = function(){
                 widthHeightTemp.push({x:img.width,y:img.height})
                 end++;
-                if(end=this.props.images.length){
-                    this.setState({
+                if(end=_this.props.images.length){
+                    console.log(widthHeightTemp)
+                    _this.setState({
                         widthHeight:widthHeightTemp
                     })
                 }
@@ -97,11 +99,14 @@ export default class ImageContainer extends Component {
                 views.push(
                     <div className="ImageContainerLine">
                         {
-                            this.state.images.slice(i*2,(i+1)*2).map((item) => {
+                            this.state.images.slice(i*2,(i+1)*2).map((item,index) => {
                                 let widthTheight = true;
-                                if(this.state.widthHeight>0){
-                                    this.state.widthHeight[i].x<this.state.widthHeight[i].x?widthTheight=false:widthTheight=true
+                                console.log(index)
+                                if(this.state.widthHeight.length>0&&this.state.widthHeight[index]){
+
+                                    widthTheight=this.state.widthHeight[index].x<this.state.widthHeight[index].y
                                 }
+                                console.log(widthTheight)
                                 return (
                                     <div className="ImageType2">
                                         <ImageZoom
