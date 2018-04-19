@@ -28,7 +28,7 @@ export default class TimeLine extends Component {
     }
     loadData=()=>{
         NProgress.start()
-        GET("api/blog/timeline",(data)=>{
+        GET("api/time/timeline",(data)=>{
             if(data&&data.status===0){
                 NProgress.done()
                 console.log(data)
