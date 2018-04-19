@@ -35,6 +35,11 @@ export default class ImageContainer extends Component {
         let views =[];
         {
             for(let i = 0;i<length;i++) {
+                let widthTheight = true;
+                if(this.state.widthHeight.length>0&&this.state.widthHeight[i]){
+
+                    widthTheight=this.state.widthHeight[i].x<this.state.widthHeight[i].y
+                }
                 views.push(
                     <div className="ImageType3">
                         {this.state.images[current*3+i]!=undefined?
@@ -42,7 +47,7 @@ export default class ImageContainer extends Component {
                                 image={{
                                     src: host+this.state.images[current*3+i],
                                     alt: 'Picture of Mt. Cook in New Zealand',
-                                    className:'ImageImg'
+                                    className:widthTheight?'ImageImgV':'ImageImgH'
                                 }}
                                 zoomImage={{
                                     src: host+this.state.images[current*3+i],
@@ -72,14 +77,18 @@ export default class ImageContainer extends Component {
         return views;
     }
     _renderImage1=()=>{
-        console.log('_renderImage1')
+        let widthTheight = true;
+        if(this.state.widthHeight.length>0&&this.state.widthHeight[0]){
+
+            widthTheight=this.state.widthHeight[0].x<this.state.widthHeight[0].y
+        }
         return(
             <div className="ImageType">
                 <ImageZoom
                     image={{
                         src: host+this.state.images[0],
                         alt: 'Picture of Mt. Cook in New Zealand',
-                        className:'ImageImg'
+                        className:widthTheight?'ImageImgV':'ImageImgV'
                     }}
                     zoomImage={{
                         src: host+this.state.images[0],
@@ -101,12 +110,10 @@ export default class ImageContainer extends Component {
                         {
                             this.state.images.slice(i*2,(i+1)*2).map((item,index) => {
                                 let widthTheight = true;
-                                console.log(index)
                                 if(this.state.widthHeight.length>0&&this.state.widthHeight[index]){
 
                                     widthTheight=this.state.widthHeight[index].x<this.state.widthHeight[index].y
                                 }
-                                console.log(widthTheight)
                                 return (
                                     <div className="ImageType2">
                                         <ImageZoom

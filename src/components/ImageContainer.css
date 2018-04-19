@@ -32,11 +32,17 @@
     overflow: hidden;
     padding-bottom:30%;
 }
-.ImageType3 .ImageImg{
+.ImageType3 .ImageImgV{
     width: 100%;
     height:auto;
     position: absolute;
     top: -20%;
+}
+.ImageType3 .ImageImgH{
+    width: auto;
+    height:100%;
+    position: absolute;
+    left: -20%;
 }
 .ImageType2 .ImageImgV{
     width: 100%;
@@ -50,9 +56,13 @@
     position: absolute;
     left: -40%;
 }
-.ImageType .ImageImg{
+.ImageType .ImageImgV{
     width: 100%;
     height:auto;
     position: absolute;
-    top: -60%;
+}
+.ImageType .ImageImgH{
+    width: auto;
+    height:100%;
+    position: absolute;
 }
