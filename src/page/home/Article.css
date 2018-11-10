@@ -8,7 +8,7 @@
 .articleTitle{
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 40px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -88,3 +88,7 @@ table {
         font-size: 12px;
     }
 }
+.react-calendar-heatmap .color-scale-1 { fill: #d6e685; }
+.react-calendar-heatmap .color-scale-2 { fill: #8cc665; }
+.react-calendar-heatmap .color-scale-3 { fill: #44a340; }
+.react-calendar-heatmap .color-scale-4 { fill: #1e6823; }
